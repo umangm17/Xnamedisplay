@@ -91,9 +91,7 @@ function Myform() {
             required
           />
         </div>
-        <button type="submit" disabled={!isFormValid}>
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
       {fullName && <div>Full Name: {fullName}</div>}
     </>
