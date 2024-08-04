@@ -13,6 +13,8 @@ function Myform() {
 
     setFullName(`${data.firstname} ${data.lastname}`);
   }
+  const isFormValid =
+    data.firstname.trim() !== "" && data.lastname.trim() !== "";
   return (
     <>
       <div className={styles.display}>Full Named Display</div>
@@ -36,7 +38,9 @@ function Myform() {
             required
           ></input>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={!isFormValid}>
+          Submit
+        </button>
         <div>{fullName && <div>Full Name: {fullName}</div>}</div>
       </form>
     </>
