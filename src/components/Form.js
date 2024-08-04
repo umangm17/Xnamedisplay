@@ -37,7 +37,7 @@ function Myform() {
           ></input>
         </div>
         <button type="submit">Submit</button>
-        <div>Full Name: {fullName}</div>
+        <div>{fullName && <div>Full Name: {fullName}</div>}</div>
       </form>
     </>
   );
